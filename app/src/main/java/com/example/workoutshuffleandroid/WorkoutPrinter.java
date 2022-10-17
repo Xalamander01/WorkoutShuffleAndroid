@@ -1,31 +1,27 @@
 package com.example.workoutshuffleandroid;
 
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
-    private TextView message;
-    private int counter = 0;
+public class WorkoutPrinter extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final String[] state = {"initial"};
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-        setContentView(R.layout.activity_main);
-
-        message = findViewById(R.id.greetingMessage);
+        setContentView(R.layout.workout_printer);
+/*
+        message = findViewById(R.id.clickCounter);
         ImageView bro = findViewById(R.id.lifterImage);
 
         //Define and attach click listener
         bro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(R.layout.selector);
+                state[0] = tapDroid(state[0]);
             }
         });
+
+ */
     }
 }

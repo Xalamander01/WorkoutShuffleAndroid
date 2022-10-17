@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="welcome_text">Do you even lift bro?</string>
+    <string name="selector_welcome_text">That\'s great, brother. What shall we do today?</string>
+    <string name="fullBodyButton">Full Body</string>
+    <string name="legsButton">Legs</string>
+    <string name="firstExerciseText">Exercise 1</string>
+    <string name="thirdExerciseText">Exercise 3</string>
+    <string name="fourthExerciseText">Exercise 4</string>
+    <string name="fifthExerciseText">Exercise 5</string>
+    <string name="sixthExerciseText">Exercise 6</string>
+    <string name="seventhExerciseText">Exercise 7</string>
 </resources>

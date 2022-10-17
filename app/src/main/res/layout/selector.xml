@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="64dp"
+            android:layout_height="70dp" app:srcCompat="@drawable/lifter_emoji" android:id="@+id/lifterImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="345dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="555dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="106dp"/>
+    <TextView
+            android:text="@string/selector_welcome_text"
+            android:layout_width="135dp"
+            android:layout_height="65dp" android:id="@+id/selectorText"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="190dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="50dp"/>
+    <ImageView
+            android:layout_width="360dp"
+            android:layout_height="139dp" app:srcCompat="@mipmap/speech_bubble_foreground"
+            android:id="@+id/speechBubbleSelector"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="5dp" android:layout_marginEnd="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="587dp"/>
+    <Button
+            android:text="@string/fullBodyButton"
+            android:layout_width="221dp"
+            android:layout_height="65dp" android:id="@+id/fullBodyButton"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="95dp"
+            app:layout_constraintBottom_toTopOf="@+id/upperButton"/>
+    <Button
+            android:text="@string/upperButton"
+            android:layout_width="221dp"
+            android:layout_height="61dp" android:id="@+id/upperButton"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="95dp"
+            app:layout_constraintBottom_toTopOf="@+id/lowerButton"/>
+    <Button
+            android:text="@string/lowerButton"
+            android:layout_width="221dp"
+            android:layout_height="64dp" android:id="@+id/lowerButton"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="95dp"
+            app:layout_constraintBottom_toTopOf="@+id/pushButton"/>
+    <Button
+            android:text="@string/pushButton"
+            android:layout_width="220dp"
+            android:layout_height="64dp" android:id="@+id/pushButton"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="95dp"
+            android:layout_marginBottom="1dp" app:layout_constraintBottom_toTopOf="@+id/pullButton"/>
+    <Button
+            android:text="@string/pullButton"
+            android:layout_width="221dp"
+            android:layout_height="58dp" android:id="@+id/pullButton"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/legsButton" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="95dp"/>
+    <Button
+            android:text="@string/legsButton"
+            android:layout_width="222dp"
+            android:layout_height="62dp" android:id="@+id/legsButton"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="95dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="136dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@mipmap/ic_launcher_round" android:id="@+id/favoriteButton"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="2dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
