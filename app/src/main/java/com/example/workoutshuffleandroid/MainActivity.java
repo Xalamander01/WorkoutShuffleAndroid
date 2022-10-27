@@ -1,5 +1,6 @@
 package com.example.workoutshuffleandroid;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,20 +13,25 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final String[] state = {"initial"};
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_main);
 
-        message = findViewById(R.id.greetingMessage);
+        //message = findViewById(R.id.greetingMessage);
         ImageView bro = findViewById(R.id.lifterImage);
 
         //Define and attach click listener
         bro.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                //startActivity(R.layout.selector);
+            public void onClick(View view) {
+                goToSelector(null, null);
             }
         });
+    }
+
+    private void goToSelector(String key, String value) {
+        Intent goToSelector = new Intent(this, Selector.class);
+        goToSelector.putExtra(key,value);
+        startActivity(goToSelector);
     }
 }

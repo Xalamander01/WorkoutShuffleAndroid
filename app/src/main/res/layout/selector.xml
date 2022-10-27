@@ -65,7 +65,12 @@
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="136dp"/>
     <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@mipmap/ic_launcher_round" android:id="@+id/favoriteButton"
+            android:layout_height="wrap_content" app:srcCompat="@mipmap/speech_bubble" android:id="@+id/backButton"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="2dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:srcCompat="@mipmap/ic_launcher" android:id="@+id/favoriteButton"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="ImageContrastCheck" android:layout_marginEnd="1dp" android:layout_marginBottom="1dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
