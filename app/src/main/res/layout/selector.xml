@@ -6,7 +6,7 @@
 
     <ImageView
             android:layout_width="64dp"
-            android:layout_height="70dp" app:srcCompat="@drawable/lifter_emoji" android:id="@+id/lifterImage"
+            android:layout_height="70dp" app:srcCompat="@drawable/lifter_emoji" android:id="@+id/lifterImageSelector"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="345dp" app:layout_constraintEnd_toEndOf="parent"

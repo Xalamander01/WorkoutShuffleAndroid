@@ -12,12 +12,6 @@
             android:contentDescription="TODO"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="85dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="261dp"/>
-    <ImageView
-            android:layout_width="291dp"
-            android:layout_height="311dp" app:srcCompat="@mipmap/speech_bubble_foreground"
-            android:id="@+id/speechBubble"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="65dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
             android:text="@string/welcome_text"
             android:layout_width="126dp"
