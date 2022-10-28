@@ -18,8 +18,6 @@ public class Selector extends AppCompatActivity {
             setContentView(R.layout.selector);
 
             ImageView backButton = findViewById(R.id.backButton);
-            ImageView lifterButton = findViewById(R.id.lifterImageSelector);
-            Button fullBodyButton = findViewById(R.id.fullBodyButton);
 
             ArrayList<Button> buttonArrayList = new ArrayList<>();
             buttonArrayList.add(findViewById(R.id.fullBodyButton));
@@ -29,13 +27,14 @@ public class Selector extends AppCompatActivity {
             buttonArrayList.add(findViewById(R.id.pullButton));
             buttonArrayList.add(findViewById(R.id.legsButton));
 
-            fullBodyButton.setOnClickListener(new View.OnClickListener() {
+            for ( Button workoutTypeButton : buttonArrayList ) {
+                workoutTypeButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        goToWorkoutPrinter(null, null);
-                        //System.out.println(String.valueOf(fullBodyButton.getId()));
+                        goToWorkoutPrinter("workoutType", getButtonIdString(workoutTypeButton));
                     }
-            });
+                });
+            }
 
             backButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -45,9 +44,22 @@ public class Selector extends AppCompatActivity {
             });
         }
 
-    private void goToWorkoutPrinter(String key, String value) {
-        Intent goToWorkoutPrinter = new Intent(this, WorkoutPrinter.class);
-        goToWorkoutPrinter.putExtra(key,value);
-        startActivity(goToWorkoutPrinter);
-    }
+        private String getButtonIdString(Button workoutTypeButton) {
+            String workoutButtonId = null;
+            switch (workoutTypeButton.getId()) {
+                case R.id.fullBodyButton: workoutButtonId = "fullBody"; break;
+                case R.id.upperButton: workoutButtonId = "upper"; break;
+                case R.id.lowerButton: workoutButtonId = "lower"; break;
+                case R.id.pushButton: workoutButtonId = "push"; break;
+                case R.id.pullButton: workoutButtonId = "pull"; break;
+                case R.id.legsButton: workoutButtonId = "legs"; break;
+            }
+            return workoutButtonId;
+        }
+
+        private void goToWorkoutPrinter(String key, String value) {
+            Intent goToWorkoutPrinter = new Intent(getApplicationContext(), WorkoutPrinter.class);
+            goToWorkoutPrinter.putExtra(key,value);
+            startActivity(goToWorkoutPrinter);
+        }
 }

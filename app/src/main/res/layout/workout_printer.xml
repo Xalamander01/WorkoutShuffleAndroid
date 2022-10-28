@@ -1,92 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_width="match_parent"
                                                    android:layout_height="match_parent">
 
     <ImageView
+            android:id="@+id/lifterImagePrinter"
             android:layout_width="150dp"
-            android:layout_height="150dp" app:srcCompat="@drawable/lifter_emoji" android:id="@+id/lifterImagePrinter"
+            android:layout_height="150dp" app:srcCompat="@drawable/lifter_emoji"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="130dp" android:layout_marginEnd="130dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="581dp" android:contentDescription="TODO"/>
-    <ScrollView android:layout_height="@string/scrollViewHeight"
-            android:layout_width="289dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="1dp"
-            android:layout_marginEnd="1dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="1dp"
-            app:layout_constraintTop_toBottomOf="@+id/lifterImagePrinter" android:id="@+id/exerciseTextScrollView"
-            app:layout_constraintStart_toEndOf="@+id/exercisePicScrollView">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="@string/scrollViewHeight"
-                      android:orientation="vertical">
-            <TextView
-                    android:text="@string/firstExerciseText"
-                    android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" android:id="@+id/firstExercise"/>
-            <TextView
-                    android:text="@string/secondExerciseText"
-                    android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" android:id="@+id/secondExercise"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" android:id="@+id/thirdExercise"
-                    android:text="@string/thirdExerciseText"/>
-            <TextView
-                    android:text="@string/fourthExerciseText"
-                    android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" android:id="@+id/fourthExercise"/>
-            <TextView
-                    android:text="@string/fifthExerciseText"
-                    android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" android:id="@+id/fifthExercise"/>
-            <TextView
-                    android:text="@string/sixthExerciseText"
-                    android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" android:id="@+id/sixthExercise"/>
-            <TextView
-                    android:text="@string/seventhExerciseText"
-                    android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" android:id="@+id/seventhExercise"/>
-        </LinearLayout>
-    </ScrollView>
+            android:layout_marginBottom="630dp" android:contentDescription="TitleImage" android:layout_marginTop="15dp"/>
     <ScrollView
-            android:layout_height="@string/scrollViewHeight"
-            android:layout_width="120dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="1dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="1dp"
-            app:layout_constraintEnd_toStartOf="@+id/exerciseTextScrollView" android:layout_marginEnd="1dp"
-            tools:ignore="SpeakableTextPresentCheck" android:id="@+id/exercisePicScrollView">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="@string/scrollViewHeight"
-                      android:orientation="vertical">
-            <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:layout_constraintTop_toBottomOf="@+id/lifterImagePrinter"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <TableLayout
+                android:id="@+id/exerciseTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                android:stretchColumns="1"
+                android:numColumns="2">
+            <TableRow
+                    android:id="@+id/firstExerciseRow"
                     android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" app:srcCompat="@mipmap/ic_launcher"
-                    android:id="@+id/firstExerciseGif" tools:ignore="ImageContrastCheck"/>
-            <ImageView
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:id="@+id/firstExerciseGif"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        app:srcCompat="@mipmap/ic_launcher"/>
+                <TextView
+                        android:id="@+id/firstExerciseText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/firstExerciseText"/>
+            </TableRow>
+            <TableRow
+                    android:id="@+id/secondExerciseRow"
                     android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" app:srcCompat="@mipmap/ic_launcher"
-                    android:id="@+id/secondExerciseGif" tools:ignore="ImageContrastCheck"/>
-            <ImageView
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@mipmap/ic_launcher"
+                        android:id="@+id/secondExerciseGif"/>
+                <TextView
+                        android:id="@+id/secondExerciseText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/secondExerciseText"/>
+            </TableRow>
+            <TableRow
+                    android:id="@+id/thirdExerciseRow"
                     android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" app:srcCompat="@mipmap/ic_launcher"
-                    android:id="@+id/thirdExerciseGif" tools:ignore="ImageContrastCheck"/>
-            <ImageView
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@mipmap/ic_launcher"
+                        android:id="@+id/thirdExerciseGif"/>
+                <TextView
+                        android:id="@+id/thirdExerciseText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/thirdExerciseText"/>
+            </TableRow>
+            <TableRow
+                    android:id="@+id/fourthExerciseRow"
                     android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" app:srcCompat="@mipmap/ic_launcher"
-                    android:id="@+id/fourthExerciseGif" tools:ignore="ImageContrastCheck"/>
-            <ImageView
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@mipmap/ic_launcher"
+                        android:id="@+id/fourthExerciseGif"/>
+                <TextView
+                        android:id="@+id/fourthExerciseText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/fourthExerciseText"/>
+            </TableRow>
+            <TableRow
+                    android:id="@+id/fifthExerciseRow"
                     android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" app:srcCompat="@mipmap/ic_launcher"
-                    android:id="@+id/fifthExerciseGif" tools:ignore="ImageContrastCheck"/>
-            <ImageView
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@mipmap/ic_launcher"
+                        android:id="@+id/fifthExerciseGif"/>
+                <TextView
+                        android:id="@+id/fifthExerciseText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/fifthExerciseText"/>
+            </TableRow>
+            <TableRow
+                    android:id="@+id/sixthExerciseRow"
                     android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" app:srcCompat="@mipmap/ic_launcher"
-                    android:id="@+id/sixthExerciseGif" android:contentDescription="TODO"
-                    tools:ignore="ImageContrastCheck"/>
-            <ImageView
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@mipmap/ic_launcher"
+                        android:id="@+id/sixthExerciseGif"/>
+                <TextView
+                        android:id="@+id/sixthExerciseText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/sixthExerciseText"/>
+            </TableRow>
+            <TableRow
+                    android:id="@+id/seventhExerciseRow"
                     android:layout_width="match_parent"
-                    android:layout_height="@string/exerciseBoxHeight" app:srcCompat="@mipmap/ic_launcher"
-                    android:id="@+id/seventhExerciseGif" tools:ignore="ImageContrastCheck"/>
-        </LinearLayout>
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@mipmap/ic_launcher"
+                        android:id="@+id/seventhExerciseGif"/>
+                <TextView
+                        android:id="@+id/seventhExerciseText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/seventhExerciseText"/>
+            </TableRow>
+        </TableLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,10 +17,7 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_main);
 
-        //message = findViewById(R.id.greetingMessage);
         ImageView bro = findViewById(R.id.lifterImage);
-
-        //Define and attach click listener
         bro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

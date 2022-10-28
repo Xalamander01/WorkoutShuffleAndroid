@@ -16,5 +16,7 @@
     <string name="sixthExerciseText">Exercise 6</string>
     <string name="seventhExerciseText">Exercise 7</string>
     <string name="exerciseBoxHeight">70dp</string>
+    <string name="exerciseGifWidth">70dp</string>
     <string name="scrollViewHeight">580dp</string>
+    <string name="gifsScrollViewWidth">100dp</string>
 </resources>
